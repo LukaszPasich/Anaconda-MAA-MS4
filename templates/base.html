@@ -15,6 +15,8 @@
 
     {% block core_css %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@0,900;0,800;0,700;0,600;0,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     {% endblock %}
 
     {% block extra_css %}
@@ -34,20 +36,20 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="container-fluid fixed-top text-center bg-success">
-      <div class="row">
+    <header class="container-fluid fixed-top text-center">
+      <div id="topnav" class="row d-none d-lg-flex bg-navbar">
         <!-- Logo -->
-        <div class="col-1 col-md-2 my-auto mx-auto py-1">
-          <img src="media/anaconda-logo-white-color.svg" class="logo">
+        <div class="col-1 col-md-3 my-auto mx-auto py-1">
+          <img src="media/anaconda-logo-white-color.svg" class="logo my-3">
         </div>
         
         <!-- Nav links -->
         <div class="col-10 col-md-8 my-auto text-right py-1 px-5">
           <ul class="list-inline list-unstyled">
-            <li class="list-inline-item my-0 px-2">About</li>
-            <li class="list-inline-item my-0 px-2">Classes</li>
-            <li class="list-inline-item my-0 px-2">Shop</li>
-            <li class="list-inline-item my-0 px-2">Contact</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2">About</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2">Classes</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2">Shop</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2">Contact</li>
 
             <!-- Accounts link -->
             <li class="list-inline-item my-0 px-2 dropdown">
@@ -58,32 +60,32 @@
                     <i class="fas fa-user fa-lg"></i>
                     {% endif %}
                   </div>
-                  <p class="my-0">Account</p>
+                  <p class="my-0 text-uppercase">Account</p>
                 </div>
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
-                  <a href="#" class="dropdown-item">Memberships</a>
-                  <a href="#" class="dropdown-item">Products</a>
+                  <a href="#" class="dropdown-item text-uppercase">Memberships</a>
+                  <a href="#" class="dropdown-item text-uppercase">Products</a>
                   {% endif %}
-                  <a href="#" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  <a href="#" class="dropdown-item text-uppercase">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item text-uppercase">Logout</a>
                 {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Sign up</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  <a href="{% url 'account_signup' %}" class="dropdown-item text-uppercase">Sign up</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item text-uppercase">Login</a>
                 {% endif %}
               </div>
             </li>
 
             <!-- Shopping Bag link -->
-            <li class="list-inline-item my-0 px-2">
+            <li class="list-inline-item my-0 px-1">
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-light{% endif %} nav-link" href="#">
                 <div class="text-center">
                   <div>
                     <!-- <i class="fas fa-shopping-bag fa-lg"></i> -->
                   </div>
-                  <p class="my-0">
+                  <p class="my-0 text-uppercase">
                     {% if grand_total %}
                       ${{ grand_total|floatformat:2 }}
                     {% else %}
@@ -98,8 +100,8 @@
         </div>
 
         <!-- Join Action Call -->
-        <div class="col-1 col-md-2 my-auto py-1 text-center">
-          <p>Join</p>
+        <div class="col-1 my-auto py-2 text-center bg-red rounded-left">
+          <a href="" class="text-light button-join text-uppercase">Join Now</a>
         </div>
       </div>
     </header>
