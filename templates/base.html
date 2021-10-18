@@ -32,8 +32,27 @@
     <title>Anaconda MAA {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <!-- Navbar -->
+    <header class="container-fluid fixed-top text-center bg-success">
+      <div class="row">
+        <div class="col-1 col-md-2 my-auto py-1">
+          <img src="media/anaconda-logo-white-color.svg">
+        </div>
 
+        <div class="col-10 col-md-8 my-auto text-right py-1 px-5">
+          <ul class="list-inline list-unstyled">
+            <li class="list-inline-item my-0 px-2">About</li>
+            <li class="list-inline-item my-0 px-2">Classes</li>
+            <li class="list-inline-item my-0 px-2">Shop</li>
+            <li class="list-inline-item my-0 px-2">Contact</li>
+            <li class="list-inline-item my-0 px-2 dropdown">Account</li>
+          </ul>
+        </div>
+
+        <div class="col-1 col-md-2 my-auto py-1 text-center">
+          <p>Join</p>
+        </div>
+      </div>
     </header>
 
     {% if messages %}
