@@ -37,7 +37,10 @@
   <body>
     <!-- Navbar -->
     <header class="container-fluid fixed-top text-center">
+
+      <!-- NAVBAR DESKTOP -->
       <div id="topnav" class="row d-none d-lg-flex bg-navbar">
+
         <!-- Logo -->
         <div class="col-1 col-md-3 my-auto mx-auto py-1">
           <img src="media/anaconda-logo-white-color.svg" class="logo my-3">
@@ -46,10 +49,10 @@
         <!-- Nav links -->
         <div class="col-10 col-md-8 my-auto text-right py-1 px-5">
           <ul class="list-inline list-unstyled">
-            <li class="list-inline-item text-light text-uppercase my-0 px-2">About</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2">Classes</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2">Shop</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2">Contact</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">About</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Classes</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Shop</li>
+            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Contact</li>
 
             <!-- Accounts link -->
             <li class="list-inline-item my-0 px-2 dropdown">
@@ -60,10 +63,10 @@
                     <i class="fas fa-user fa-lg"></i>
                     {% endif %}
                   </div>
-                  <p class="my-0 text-uppercase">Account</p>
+                  <p class="my-0 text-uppercase hvr-underline-from-center">Account</p>
                 </div>
               </a>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              <div class="dropdown-menu border-0 navlink-account bg-lgrey" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                   <a href="#" class="dropdown-item text-uppercase">Memberships</a>
@@ -100,9 +103,94 @@
         </div>
 
         <!-- Join Action Call -->
-        <div class="col-1 my-auto py-2 text-center bg-red rounded-left">
-          <a href="" class="text-light button-join text-uppercase">Join Now</a>
+       <a href="" class="col-1 button-join text-uppercase text-decoration-none my-auto py-3 text-center bg-red rounded-left">Join Now</a> 
+      </div>
+
+      <!-- NAVBAR MOBILE -->
+      <div class="row bg-navbar d-flex d-lg-none">
+
+        <!-- Logo mobile -->
+        <div class="col-5 my-auto mx-auto">
+          <img src="media/anaconda-logo-white-color.svg" class="logo my-1">
         </div>
+
+        <!-- Navlinks mobile -->
+        <div class="col-7 pt-1 text-right">
+          <div class="row">
+
+            <!-- Shopping Bag link -->
+            <div class="col-12">
+              <li class="list-inline-item mt-2 px-1">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-light{% endif %} nav-link" href="#">
+                  <div>
+                    <div>
+                      <!-- <i class="fas fa-shopping-bag fa-lg"></i> -->
+                    </div>
+                    <p class="my-0 text-uppercase">
+                      {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                      {% else %}
+                        $0.00
+                      {% endif %}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </div>
+
+            <!-- Accounts link -->
+            <div class="col-12">
+              <li class="list-inline-item my-0 dropdown">
+                <a href="#" class="text-light nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="text-center">
+                    {% if request.user.is_authenticated %}
+                    <i class="fas fa-user fa-lg px-1"></i>
+                    {% endif %}
+                    <p class="my-0 text-uppercase d-inline-block">Account</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu border-0 navlink-account bg-lgrey" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a href="#" class="dropdown-item text-uppercase">Memberships</a>
+                    <a href="#" class="dropdown-item text-uppercase">Products</a>
+                    {% endif %}
+                    <a href="#" class="dropdown-item text-uppercase">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item text-uppercase">Logout</a>
+                  {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item text-uppercase">Sign up</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item text-uppercase">Login</a>
+                  {% endif %}
+                </div>
+              </li>
+            </div>
+
+            <!-- Toggle Navlinks -->
+            <div class="col-12 pos-f-t">
+              <div class="collapse" id="navbarToggleExternalContent">
+                <div class="p-4">
+                  <h5 class="text-white h4">Collapsed content</h5>
+                  <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
+              </div>
+              <nav class="navbar navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+            
+
+
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-light"></span>
+          </button>
+          <!-- {% include 'includes/mobile-navbar.html' %} -->
+        </nav>
       </div>
     </header>
 
