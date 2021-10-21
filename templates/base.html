@@ -49,10 +49,10 @@
         <!-- Nav links -->
         <div class="col-10 col-md-8 my-auto text-right py-1 px-5">
           <ul class="list-inline list-unstyled">
-            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">About</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Classes</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Shop</li>
-            <li class="list-inline-item text-light text-uppercase my-0 px-2 hvr-underline-from-center">Contact</li>
+            <a href="#" class="d-inline text-decoration-none text-light text-uppercase my-0 px-2 hvr-underline-from-center">About</a>
+            <a href="#" class="d-inline text-decoration-none text-light text-uppercase my-0 px-2 hvr-underline-from-center">Classes</a>
+            <a href="#" class="d-inline text-decoration-none text-light text-uppercase my-0 px-2 hvr-underline-from-center">Shop</a>
+            <a href="#" class="d-inline text-decoration-none text-light text-uppercase my-0 px-2 hvr-underline-from-center">Contact</a>
 
             <!-- Accounts link -->
             <li class="list-inline-item my-0 px-2 dropdown">
@@ -103,12 +103,11 @@
         </div>
 
         <!-- Join Action Call -->
-       <a href="" class="col-1 button-join text-uppercase text-decoration-none my-auto py-3 text-center bg-red rounded-left">Join Now</a> 
+       <a href="" class="col-1 button-join text-uppercase text-decoration-none my-auto py-3 px-2 text-center bg-red rounded-left">Join Now</a> 
       </div>
 
       <!-- NAVBAR MOBILE -->
       <div class="row bg-navbar d-flex d-lg-none">
-
         <!-- Logo mobile -->
         <div class="col-5 my-auto mx-auto">
           <img src="media/anaconda-logo-white-color.svg" class="logo my-1">
@@ -119,7 +118,7 @@
           <div class="row">
 
             <!-- Shopping Bag link -->
-            <div class="col-12">
+            <div class="col-12 col-sm-11">
               <li class="list-inline-item mt-2 px-1">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-light{% endif %} nav-link" href="#">
                   <div>
@@ -139,7 +138,7 @@
             </div>
 
             <!-- Accounts link -->
-            <div class="col-12">
+            <div class="col-12 col-sm-11">
               <li class="list-inline-item my-0 dropdown">
                 <a href="#" class="text-light nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
@@ -166,31 +165,25 @@
             </div>
 
             <!-- Toggle Navlinks -->
-            <div class="col-12 pos-f-t">
-              <div class="collapse" id="navbarToggleExternalContent">
-                <div class="p-4">
-                  <h5 class="text-white h4">Collapsed content</h5>
-                  <span class="text-muted">Toggleable via the navbar brand.</span>
-                </div>
-              </div>
-              <nav class="navbar navbar-dark">
+            <div class="col-12 col-sm-11">
+              <nav class="navbar navbar-dark d-inline-block">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               </nav>
+              <div class="collapse" id="navbarToggleExternalContent">
+                <div class="p-3">
+                  <a href="#" class="d-block text-decoration-none text-right text-light text-uppercase my-0 px-2 py-1">About</a>
+                  <a href="#" class="d-block text-decoration-none text-right text-light text-uppercase my-0 px-2 py-1">Classes</a>
+                  <a href="#" class="d-block text-decoration-none text-right text-light text-uppercase my-0 px-2 py-1">Shop</a>
+                  <a href="#" class="d-block text-decoration-none text-right text-light text-uppercase my-0 px-2 py-1">Contact</a>
+                  <a href="#" class="d-block text-decoration-none text-right text-light text-uppercase my-0 px-2 py-1">Join Now</a> 
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
-            
-
-
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"></span>
-          </button>
-          <!-- {% include 'includes/mobile-navbar.html' %} -->
-        </nav>
       </div>
     </header>
 
@@ -205,6 +198,10 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+      
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
