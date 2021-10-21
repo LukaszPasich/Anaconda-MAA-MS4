@@ -127,13 +127,15 @@ footer a {
     color: #bbb;
 }
 
+footer a:hover {
+    color: #fff;
+}
+
 .hr-footer {
-    border: 1px solid #bbb;
-    opacity: .25;
+    border-top: 1px solid #bbb;
 }
 
 .footer-social-icons {
-    line-height: 130px;
     font-size: 30px;
     text-align:center;
 }
@@ -149,6 +151,34 @@ footer a {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+
+
+
+
+/* ?. MEDIA QUERIES */
+
+@media screen and (max-width: 1400px) {
+	.footer-logo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.footer-social-icons {
+        border-top: 1px solid #bbb;
+        line-height: 60px;
+        padding-top: 25px;
+    }
+
+@media screen and (max-width: 575px) {
+    .footer-address {
+        border-bottom: 1px solid #bbb;
+        margin-bottom: 20px;
+    }
+    
+    
+
 
 
 
