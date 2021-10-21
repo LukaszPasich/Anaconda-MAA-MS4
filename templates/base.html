@@ -199,8 +199,66 @@
     {% block content %}
     {% endblock %}
 
-    <footer>
-      
+    <!-- Footer -->
+    <footer class="container-fluid pt-5 bg-redgrey text-lgrey text-footer">
+      <div class="row justify-content-center">
+
+        <div class="col-2 footer-logo">
+          <img src="media/anaconda-logo-grey.svg" class="logo-footer p-0" alt="Anaconda logo">
+        </div>
+
+        <div class="col-11 col-sm-5 col-lg-4 col-xl-2">
+          <div>
+            <p class="my-1"><i class="fas fa-map-marker-alt"></i> Anaconda Martial Arts Academy</p>
+            <p class="my-1">Unit 5, Northern Cross Business Park</p>
+            <p>North Road, Dublin 15 </p>
+            <br>
+            <p><i class="fas fa-phone-alt"></i>+353 1 823 92009222</p>
+            <br>
+            <p><i class="far fa-envelope"></i>info@amaa.ie</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-lg-2">
+          <p><i class="far fa-clock"></i>Monday - Friday</p>
+          <p>16.00 - 21.00</p>
+          <br>
+          <p><i class="far fa-clock"></i>Saturday</p>
+          <p>10.00 - 13.00</p>
+          <p>16.00 - 20.00</p>
+        </div>
+
+        <div class="col-5 col-sm-2 col-lg-1">
+          <p><a href="#" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">About</a></p>
+          <p><a href="#" class="text-decoration-none">Classes</a></p>
+          <p><a href="#" class="text-decoration-none">Times & Prices</a></p>
+          <p><a href="#" class="text-decoration-none">Coaches</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
+
+        <div class="col-11 col-lg-4 col-xxl-3">
+          <div class="footer-social-icons">
+            <a href="https://twitter.com/" aria-label="Go to our twitter page (opens in new tab)" target="_blank"><i
+                class="fab fa-twitter px-1"></i></a>
+            <a href="https://www.pinterest.com/" aria-label="Go to our pinterest page (opens in new tab)"
+              target="_blank"><i class="fab fa-pinterest px-1"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Go to our facebook page (opens in new tab)"
+              target="_blank"><i class="fab fa-facebook px-1"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Go to our instagram page (opens in new tab)"
+              target="_blank"><i class="fab fa-instagram px-1"></i></a>
+            <a href="https://www.youtube.com/" aria-label="Go to our youtube channel (opens in new tab)"
+              target="_blank"><i class="fab fa-youtube px-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-11">
+          <hr class="hr-footer">
+          <p class="text-center py-0">Developed by Lukasz Pasich &copy;2021</p>
+        </div>
+      </div>
     </footer>
 
     {% block postloadjs %}

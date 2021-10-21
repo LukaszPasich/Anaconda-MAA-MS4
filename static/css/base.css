@@ -1,5 +1,6 @@
 /* 0. GENERAL STYLES*/
 /* 1. NAVBAR STYLES */
+/* 2. FOOTER STYLES */
 
 
 /* 0. GENERAL STYLES*/
@@ -21,6 +22,10 @@ h1 {
     background-color: #f7243c;
 }
 
+.bg-redgrey {
+    background-color: #453C3D;
+}
+
 .bg-lgrey {
     background-color: #eee;
 }
@@ -31,6 +36,10 @@ h1 {
 
 .text-red {
     color: #f7243c;
+}
+
+.text-lgrey {
+    color: #BBB;
 }
 
 /* 1. NAVBAR STYLES */
@@ -99,6 +108,35 @@ h1 {
 }
 
 
+/* 2. FOOTER STYLES */
+
+.logo-footer {
+    height: 90px;
+    width: 90px;
+}
+
+.text-footer {
+    font-size: .75rem;
+}
+
+.text-developed {
+    font-size: .75rem;
+}
+
+footer a {
+    color: #bbb;
+}
+
+.hr-footer {
+    border: 1px solid #bbb;
+    opacity: .25;
+}
+
+.footer-social-icons {
+    line-height: 130px;
+    font-size: 30px;
+    text-align:center;
+}
 
 
 
