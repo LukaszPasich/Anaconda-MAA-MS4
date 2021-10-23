@@ -1,4 +1,14 @@
-.aaa {
-    color: blue;
-    font-size: 3rem;
+.header-home-banner {
+    background: url('/media/home-page-main-banner.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 900px;
+}
+
+.header-home-banner a {
+    margin-top: 25px;
+    min-width: 280px;
+    width: 20%;
 }

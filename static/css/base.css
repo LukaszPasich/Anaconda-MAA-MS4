@@ -15,11 +15,30 @@ body {
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
+	font-size: 3.125rem;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 350px;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	color: #fff;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .bg-red {
     background-color: #f7243c;
+}
+
+.bg-dred {
+    background-color: #9f1323;
 }
 
 .bg-redgrey {
@@ -32,6 +51,10 @@ h1 {
 
 .bg-dgrey {
     background-color: #222;
+}
+
+.text-lred {
+    color: #f79a8b;
 }
 
 .text-red {
@@ -51,7 +74,7 @@ h1 {
 
 .bg-navbar {
     background-color: #000;
-    opacity: 90%;
+    opacity: 85%;
 }
 
 .button-join {
@@ -62,7 +85,7 @@ h1 {
 }
 
 .button-join:hover {
-    background-color: #9f1323;
+    background-color: #f7243c;
     color: #fff;
     -webkit-transition: background-color 0.3s ease-out;
     -moz-transition: background-color 0.3s ease-out;
@@ -143,6 +166,8 @@ footer a:hover {
 
 
 
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -170,14 +195,28 @@ footer a:hover {
         line-height: 60px;
         padding-top: 25px;
     }
+}
 
 @media screen and (max-width: 575px) {
     .footer-address {
         border-bottom: 1px solid #bbb;
         margin-bottom: 20px;
     }
+}
+
+@media screen and (max-width: 576px) {
+	h1 {
+		font-size: 2.375rem;
+        margin-top: 250px;
+    }
+}
     
-    
+
+
+
+
+
+
 
 
 
