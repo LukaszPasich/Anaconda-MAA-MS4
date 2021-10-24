@@ -9,7 +9,7 @@ html{
     height:100%
 }
 
-body {
+body, .body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
@@ -74,6 +74,10 @@ h5 {
 
 .text-red {
     color: #f7243c;
+}
+
+.text-dred {
+    color: #9f1323;
 }
 
 .text-lgrey {
