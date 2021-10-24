@@ -1,4 +1,17 @@
 from django.contrib import admin
 from .models import Membership
 
-admin.site.register(Membership)
+
+class MembershipAdmin(admin.ModelAdmin):
+    list_display = (
+        'membership_no',
+        'name',
+        'small_name',
+        'price',
+        'pay_interval',
+    )
+
+    ordering = ('membership_no',)
+
+
+admin.site.register(Membership, MembershipAdmin)
