@@ -6,3 +6,64 @@
 	background-size: cover;
 	height: 700px;
 }
+
+.membership-name {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.membership-smallname {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.membership-description {
+    min-height: 75px;
+}
+
+.membership-description-list {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.membership-price {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 4rem;
+}
+
+.membership-euro {
+	font-weight: 400;
+    font-size: 2.75rem;
+}
+
+.membership-payinterval {
+	font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.button-start {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+	margin-bottom: 50px;
+}
+
+.button-start:hover {
+    background-color: #fff;
+	color: #720F1B;
+	text-decoration: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 576px) {
+	.header-membership-banner {
+        height: 400px;
+    }
+}

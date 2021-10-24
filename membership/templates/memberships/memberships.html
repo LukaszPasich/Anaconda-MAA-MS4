@@ -20,15 +20,45 @@
 
 <!-- main content -->
 <section>
-    <div class="row justify-content-center bg-ddgrey pb-5">
-        <h5 class="col-10 py-4 py-md-5 px-5">Choose Your Membership Plan</h5>
+    <div class="row justify-content-center bg-ddgrey pb-5 mb-0">
+        <h5 class="col-10 pt-4 pt-md-5 mb-0 px-5">Choose Your Membership Plan</h5>
     </div>
-    <div class="row">
-        <div class="col-12 bg-ddgrey text-light">
-            <div class="row justify-content-center ">
-                <div class="col-2 bg-red">
-                    <p>aaa</p>
+    <div class="row justify-content-center bg-ddgrey pb-5 mt-0">
+        <div class="col-11 col-sm-10 col-md-8 col-lg-11 col-xl-10">
+            <div class="row justify-content-center">
+
+                <!-- Free class -->
+                <div class="col-10 col-sm-6 col-lg-3 text-light">
+                    <div class="bg-dred text-center py-4 px-2 m-2 rounded">
+                        <hr class="hr-light pt-0 mt-0 mx-2">
+                        <p class="membership-name py-0 my-0">
+                            Trial Class
+                        </p>
+                        <p class="membership-smallname">
+                            (Kids) &nbsp; 
+                        </p>
+                        <hr class="hr-light mx-2">
+                        <div class="membership-description px-1 text-left">
+                            <ul>
+                                <li class="membership-description-list">Boxing or</li>
+                                <li class="membership-description-list">Kickboxing or</li>
+                                <li class="membership-description-list">Brazilian Jiu-Jitsu</li>
+                            </ul>
+                        </div>
+                        <hr class="hr-light mx-2">
+                        <p class="membership-price pb-0 mb-0 pt-3">
+                            <span class="membership-euro">&euro;&nbsp;</span>99</span>
+                        </p>
+                        <p class="membership-payinterval py-0 my-0 mb-3">
+                            / month &nbsp;
+                        </p>
+                        <div class="pt-3 pb-4">
+                            <a href="#" class="button-start bg-lgrey py-3 px-4 mx-0 rounded text-uppercase text-decoration-none text-dred">Get Started</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Membership plans -->
                 {% for membership in memberships %}
                 <div class="col-10 col-sm-6 col-lg-3">
                         <div class="membership-prices-box bgrd-color-white">
@@ -51,8 +81,12 @@
                         </div>
                     </div>
                 {% endfor %}
+                
+                <div class="col-11 text-light mt-5">
+                    <p>You can attend only classes in chosen discipline (all disciplines in case of Unlimited membership) and only at your level or age group.</p>
+                </div>
+
             </div>
-            {{ memberships }}
         </div>
     </div>
 </section>

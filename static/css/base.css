@@ -56,8 +56,12 @@ h5 {
     background-color: #453C3D;
 }
 
-.bg-lgrey {
+.bg-llgrey {
     background-color: #eee;
+}
+
+.bg-lgrey {
+    background-color: #ddd;
 }
 
 .bg-dgrey {
@@ -173,7 +177,7 @@ footer a:hover {
     color: #fff;
 }
 
-.hr-footer {
+.hr-footer, .hr-light {
     border-top: 1px solid #bbb;
 }
 
@@ -200,7 +204,7 @@ footer a:hover {
 
 
 
-/* ?. MEDIA QUERIES */
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1400px) {
 	.footer-logo {
