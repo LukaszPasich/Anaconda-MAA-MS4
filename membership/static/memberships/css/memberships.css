@@ -1,0 +1,8 @@
+.header-membership-banner {
+	background: url('/static/images/membership-page-main-banner.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 700px;
+}

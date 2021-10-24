@@ -2,32 +2,58 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'memberships/css/memberships.css' %}">
 {% endblock %}
 
 
 {% block content %}
 <!-- main banner -->
-<div class="row header-home-banner justify-content-center">
+<div class="row header-membership-banner justify-content-center">
     <div class="col-12">
         <div> 
             <h1 class="row justify-content-center pb-5 mb-5">
-                <div class="col-auto">Get Active</div>
-                <div class="col-auto text-lred">Get Fit</div>
-                <div class="col-auto">Build Confidence</div>
+                <div class="col-auto">Membership</div>
             </h1>
-            <h3 class="d-block py-3 py-md-4 px-2">Memberships</h3>
-            <a href="#" class="d-block button-join text-center bg-dred py-3 text-decoration-none text-uppercase rounded mx-auto">Join Our Academy</a> 
         </div>
     </div>
 </div>
 
 <!-- main content -->
-<section class="row justify-content-center bg-ddgrey pb-5">
-    <h5 class="col-10 py-4 py-md-5">Choose Your Membership Plan</h5>
-        <div class="col">
+<section>
+    <div class="row justify-content-center bg-ddgrey pb-5">
+        <h5 class="col-10 py-4 py-md-5 px-5">Choose Your Membership Plan</h5>
+    </div>
+    <div class="row">
+        <div class="col-12 bg-ddgrey text-light">
+            <div class="row justify-content-center ">
+                <div class="col-2 bg-red">
+                    <p>aaa</p>
+                </div>
+                {% for membership in memberships %}
+                <div class="col-10 col-sm-6 col-lg-3">
+                        <div class="membership-prices-box bgrd-color-white">
+                            <p class="membership-name color-ashblack">
+                                Unlimited
+                            </p>
+                            <p class="membership-forwho color-grey">
+                                &nbsp;
+                            </p>
+                            <p class="membership-whatclasses membership-whatclasses-list color-ashblack" style="text-align: center;">
+                                All Classes
+                            </p>
+                            <p class="membership-price color-ashblack">
+                                <span class="membership-euro">&euro;&nbsp;</span>99<span class="membership-euro">.00</span>
+                            </p>
+                            <p class="membership-period color-grey">
+                                / month
+                            </p>
+                            <a href="contact.html" class="btn-getstarted-red">Get Started</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
             {{ memberships }}
         </div>
+    </div>
 </section>
-
 {% endblock %}
