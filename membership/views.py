@@ -13,4 +13,4 @@ def all_memberships(request):
         'memberships': memberships,
     }
 
-    return render(request, 'membership/memberships.html', context)
+    return render(request, 'memberships/memberships.html', context)
