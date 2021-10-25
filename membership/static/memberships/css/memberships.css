@@ -14,7 +14,7 @@
 }
 
 .membership-smallname {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
 }
 
@@ -39,26 +39,53 @@
 }
 
 .membership-payinterval {
-	font-weight: 300;
+	font-weight: 400;
     font-size: 1.125rem;
 }
 
-.button-start {
+.no-fee {
+	font-size: .875rem;
+	font-weight: 500;
+}
+
+.disclaimer {
+	font-size: .875rem;
+	font-weight: 400;
+}
+
+.disclaimer > a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.button-start-red {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: 800;
 	margin-bottom: 50px;
+	background-color: #fff;
 }
 
-.button-start:hover {
-    background-color: #fff;
-	color: #720F1B;
+.button-start-white {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+	margin-bottom: 50px;
+	background-color: #9f1323;
+	color: #fff;
+}
+
+.button-start-red:hover,
+.button-start-white:hover {
+    background-color: #f7243c;
+	color: #fff;
 	text-decoration: none;
     -webkit-transition: background-color 0.3s ease-out;
     -moz-transition: background-color 0.3s ease-out;
     -o-transition: background-color 0.3s ease-out;
     transition: background-color 0.3s ease-out;
 }
+
 
 /* MEDIA QUERIES */
 

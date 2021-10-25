@@ -56,6 +56,10 @@ h5 {
     background-color: #453C3D;
 }
 
+.bg-white {
+    background-color: #fff;
+}
+
 .bg-llgrey {
     background-color: #eee;
 }
@@ -86,6 +90,10 @@ h5 {
 
 .text-lgrey {
     color: #BBB;
+}
+
+.text-ddgrey {
+    color: #111;
 }
 
 /* 1. NAVBAR STYLES */
@@ -177,8 +185,13 @@ footer a:hover {
     color: #fff;
 }
 
-.hr-footer, .hr-light {
+.hr-footer,
+.hr-light {
     border-top: 1px solid #bbb;
+}
+
+.hr-dark {
+    border-top: 1px solid #444;
 }
 
 .footer-social-icons {
