@@ -73,10 +73,18 @@
                             {% endif %}
                         </p>
                         <hr class="hr-dark mx-2">
-                        <div class="membership-description px-1 text-left">
-                            <p class="membership-description-list">
-                                {{ membership.description }}
-                            </p>
+                        <div class="membership-description px-1">
+                            {% if membership.all_classes %}
+                            <ul class="p-0 m-0">
+                                <p class="text-center">All Classes</p>
+                            </ul>
+                            {% else %}
+                            <ul>
+                                <li class="membership-description-list text-left">Boxing or</li>
+                                <li class="membership-description-list text-left">Kickboxing or</li>
+                                <li class="membership-description-list text-left">Brazilian Jiu-Jitsu</li>
+                            </ul>
+                            {% endif %}
                         </div>
                         <hr class="hr-dark mx-2">
                         <p class="membership-price pb-0 mb-0 pt-2">
