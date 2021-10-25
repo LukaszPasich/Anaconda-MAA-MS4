@@ -22,6 +22,10 @@
 	text-decoration: none;
 }
 
+button.form-control:hover {
+	background-color: #333;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 576px) {

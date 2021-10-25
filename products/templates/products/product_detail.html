@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 
@@ -16,7 +16,7 @@
 <!-- main banner -->
 <div class="row header-banner justify-content-center">
     <div class="col-12">
-        <div> 
+        <div>
             <h1 class="row justify-content-center pb-5 mb-5">
                 <div class="col-auto">Shop</div>
             </h1>
@@ -26,53 +26,63 @@
 
 <!-- main content -->
 
-<div class="container-fluid bg-dgrey">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
-                <!-- product image -->
-                {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                </a>
-                {% endif %}
-            </div>
+<div class="row bg-dgrey px-4 py-3">
+
+    <!-- product image -->
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <div class="image-container my-5">
+            {% if product.image %}
+            <a href="{{ product.image.url }}" target="_blank">
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+            {% else %}
+            <a href="">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+            </a>
+            {% endif %}
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+    </div>
 
-                <!-- product category -->
-                {% if product.category %}
-                <p class="small mt-1 mb-0">
-                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                    </a>
-                </p>
-                {% endif %}
+    <!-- product details -->
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="product-details-container mb-5 mt-md-5">
 
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                {% if request.user.is_superuser %}
+            <!-- product category -->
+            {% if product.category %}
+            <p class="small mt-1 mb-0">
+                <a class="link-categories small text-lgrey text-uppercase my-0"
+                    href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                </a>
+            </p>
+            {% endif %}
 
-               
-                
-                {% endif %}
-                <p class="mt-3">{{ product.description }}</p>
+            <!-- product name -->
+            <p class="mb-0 text-light">{{ product.name }}</p>
 
-                <!-- add product to the shopping bag form -->
-        
+            <!-- product price -->
+            <p class="lead mb-0 text-left font-weight-bold text-light">${{ product.price }}</p>
 
-            </div>
+            <!-- product rating -->
+            {% if product.rating %}
+            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+            {% else %}
+            <small class="text-muted">No Rating</small>
+            {% endif %}
+
+            <!-- product description -->
+            <p class="mt-3 text-light font-weight-light">{{ product.description }}</p>
+
+
+
+
+            {% if request.user.is_superuser %}
+            {% endif %}
+            <!-- add product to the shopping bag form -->
+
+
         </div>
     </div>
 </div>
+
 {% endblock %}
