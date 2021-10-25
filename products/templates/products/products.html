@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'memberships/css/memberships.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<!-- main banner -->
+<div class="row header-membership-banner justify-content-center">
+    <div class="col-12">
+        <div> 
+            <h1 class="row justify-content-center pb-5 mb-5">
+                <div class="col-auto">Shop</div>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- main content -->
+<section>
+    <div class="row justify-content-center bg-ddgrey pb-5 mb-0">
+        <h5 class="col-10 pt-5 pb-2 pb-0 mb-0 px-5">Check out Anaconda MAA Merchandise</h5>
+    </div>
+    <div class="row justify-content-center bg-ddgrey pb-4 mt-0">
+        <div class="col-11 col-sm-10 col-md-8 col-lg-11 col-xl-10">
+            <div class="row justify-content-center">
+
+                {{ products }}
+                <!-- Membership plans -->
+                {% for product in products %}
+                <div class="col-10 col-sm-6 col-lg-3 text-ddgrey mb-4">
+                    <div class="bg-llgrey text-center py-3 px-2 m-2 rounded">
+                        <p class="membership-name py-0 my-0">
+                            {{ membership.name }}
+                        </p>
+                        <p class="membership-smallname">
+                            {% if membership.small_name %}
+                                {{ membership.small_name }}
+                            {% else %}
+                                &nbsp;
+                            {% endif %}
+                        </p>
+                        <hr class="hr-dark mx-2">
+                        <div class="membership-description px-1">
+                            {% if membership.all_classes %}
+                            <ul class="p-0 m-0">
+                                <p class="text-center">All Classes</p>
+                            </ul>
+                            {% else %}
+                            <ul>
+                                <li class="membership-description-list text-left">Boxing or</li>
+                                <li class="membership-description-list text-left">Kickboxing or</li>
+                                <li class="membership-description-list text-left">Brazilian Jiu-Jitsu</li>
+                            </ul>
+                            {% endif %}
+                        </div>
+                        <hr class="hr-dark mx-2">
+                        <p class="membership-price pb-0 mb-0 pt-2">
+                            <span class="membership-euro">&euro;&nbsp;</span>{{ membership.price }}</span>
+                        </p>
+                        <p class="membership-payinterval py-0 my-0 mb-3">
+                            {{ membership.pay_interval }}
+                        </p>
+                        <div class="pt-3 pb-4">
+                            <a href="#" class="button-start-white py-3 px-4 mx-0 rounded text-uppercase text-decoration-none">Get Started</a>
+                        </div>
+                        <p class="no-fee text-center text-uppercase mt-2 mb-0 text-ddgrey">- No joining fee -</p>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                <div class="col-11 text-light text-center mt-0">
+                    <p class="disclaimer mx-3">You can attend only classes in the chosen discipline (all disciplines in case of Unlimited membership) and only at your level or age group.</p>
+                    <p class="disclaimer">See timetables
+                        <a href="#" class="d-inline text-lred">here</a>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
