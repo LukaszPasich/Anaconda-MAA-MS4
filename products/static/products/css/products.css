@@ -1,0 +1,31 @@
+.header-banner {
+	background: url('/static/images/shop-page-main-banner.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 700px;
+}
+
+.discount {
+	font-size: 1.125rem;
+	background-color: rgba(159, 19, 35, 0.8);
+	font-weight: 500;
+	top: 150px;
+	left: 0px;
+	position: fixed;
+	z-index: 1;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 576px) {
+	.header-banner {
+        height: 400px;
+    }
+
+	.discount {
+		font-size: 0.875rem;
+	}
+}

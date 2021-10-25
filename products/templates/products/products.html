@@ -2,13 +2,19 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'memberships/css/memberships.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 
 {% block content %}
+<div class="row">
+    <div class="col-12 discount">
+        <p class="text-light text-center text-uppercase p-0 m-0">10% Discount for Academy Members</p>
+    </div>
+</div>
+
 <!-- main banner -->
-<div class="row header-membership-banner justify-content-center">
+<div class="row header-banner justify-content-center">
     <div class="col-12">
         <div> 
             <h1 class="row justify-content-center pb-5 mb-5">
@@ -23,6 +29,7 @@
     <div class="row justify-content-center bg-ddgrey pb-5 mb-0">
         <h5 class="col-10 pt-5 pb-2 pb-0 mb-0 px-5">Check out Anaconda MAA Merchandise</h5>
     </div>
+    <!-- Products -->
     <div class="row justify-content-center bg-ddgrey pb-4 mt-0">
         <div class="col-11 col-sm-10 col-md-8 col-lg-11 col-xl-10">
             <div class="row justify-content-center">
@@ -76,8 +83,17 @@
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
+
+            <div class="row py-5">
+                <div class="col-12 justify-content-center">
+                    <p class="lead text-light text-center font-weight-bold py-2 px-2"> Join the Anaconda MAA Team</p>
+                </div>
+                <div class="col-12 justify-content-center"></div>
+                    <a href="{% url 'memberships' %}" class="button-join text-center bg-dred py-3 px-5 text-decoration-none text-uppercase rounded mx-auto">Join Our Academy</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
