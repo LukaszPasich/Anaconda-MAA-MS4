@@ -17,6 +17,10 @@
 	z-index: 1;
 }
 
+.link-categories:hover {
+	color: #fff;
+	text-decoration: none;
+}
 
 /* MEDIA QUERIES */
 
