@@ -27,56 +27,55 @@
         <div class="col-11 col-sm-10 col-md-8 col-lg-11 col-xl-10">
             <div class="row justify-content-center">
 
-                {{ products }}
-                <!-- Membership plans -->
+                <!-- Products -->
                 {% for product in products %}
-                <div class="col-10 col-sm-6 col-lg-3 text-ddgrey mb-4">
-                    <div class="bg-llgrey text-center py-3 px-2 m-2 rounded">
-                        <p class="membership-name py-0 my-0">
-                            {{ membership.name }}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0 bg-ddgrey pb-0">
+
+                        <!-- Product image -->
+                        {% if product.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+
+                        <!-- Product category -->
+                        {% if product.category %}
+                        <p class="mt-1 my-0">
+                            <a class="small text-lgrey text-uppercase my-0" href="{% url 'products' %}?category={{ product.category.name }}">
+                                {{ product.category.friendly_name }}
+                            </a>
                         </p>
-                        <p class="membership-smallname">
-                            {% if membership.small_name %}
-                                {{ membership.small_name }}
-                            {% else %}
-                                &nbsp;
-                            {% endif %}
-                        </p>
-                        <hr class="hr-dark mx-2">
-                        <div class="membership-description px-1">
-                            {% if membership.all_classes %}
-                            <ul class="p-0 m-0">
-                                <p class="text-center">All Classes</p>
-                            </ul>
-                            {% else %}
-                            <ul>
-                                <li class="membership-description-list text-left">Boxing or</li>
-                                <li class="membership-description-list text-left">Kickboxing or</li>
-                                <li class="membership-description-list text-left">Brazilian Jiu-Jitsu</li>
-                            </ul>
-                            {% endif %}
+                        {% endif %}
+
+                        <!-- Product name -->
+                        <div class="pb-0">
+                            <p class="mb-0 text-light text-left">{{ product.name }}</p>
                         </div>
-                        <hr class="hr-dark mx-2">
-                        <p class="membership-price pb-0 mb-0 pt-2">
-                            <span class="membership-euro">&euro;&nbsp;</span>{{ membership.price }}</span>
-                        </p>
-                        <p class="membership-payinterval py-0 my-0 mb-3">
-                            {{ membership.pay_interval }}
-                        </p>
-                        <div class="pt-3 pb-4">
-                            <a href="#" class="button-start-white py-3 px-4 mx-0 rounded text-uppercase text-decoration-none">Get Started</a>
+
+                        <!-- Product price -->
+                        <div class="bg-ddgrey text-light pt-0 border-0 text-left pb-0">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">&euro;{{ product.price }}</p>
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
-                        <p class="no-fee text-center text-uppercase mt-2 mb-0 text-ddgrey">- No joining fee -</p>
+                        <hr class="hr-light mb-3 pb-3">
                     </div>
                 </div>
                 {% endfor %}
-                
-                <div class="col-11 text-light text-center mt-0">
-                    <p class="disclaimer mx-3">You can attend only classes in the chosen discipline (all disciplines in case of Unlimited membership) and only at your level or age group.</p>
-                    <p class="disclaimer">See timetables
-                        <a href="#" class="d-inline text-lred">here</a>.
-                    </p>
-                </div>
 
             </div>
         </div>

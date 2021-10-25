@@ -124,6 +124,14 @@ h5 {
     transition: background-color 0.3s ease-out;
 }
 
+.text-1half-rem {
+    font-size: 1.5rem;
+}
+
+.text-2rem {
+    font-size: 2rem;
+}
+
 /* Underline From Center - the code below has been copied from Hover.css website (https://ianlunn.github.io/Hover/#effects) */
 
 .hvr-underline-from-center {
