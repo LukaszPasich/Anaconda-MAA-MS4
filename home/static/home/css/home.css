@@ -1,5 +1,5 @@
 .header-home-banner {
-    background: url('/media/home-page-main-banner.jpg') no-repeat center center;
+    background: url('/static/images/home-page-main-banner.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
