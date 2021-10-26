@@ -1,7 +1,7 @@
 /* 0. GENERAL STYLES*/
 /* 1. NAVBAR STYLES */
 /* 2. FOOTER STYLES */
-
+/* 3. CONTENT STYLES */
 
 /* 0. GENERAL STYLES*/
 
@@ -214,6 +214,8 @@ footer a:hover {
     text-align:center;
 }
 
+/* 3. CONTENT STYLES */
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -223,9 +225,19 @@ footer a:hover {
     width: 1.5rem;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
 
-
-
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 
@@ -254,43 +266,5 @@ footer a:hover {
 	h1 {
 		font-size: 2.375rem;
         margin-top: 250px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
     }
 }
