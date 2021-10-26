@@ -74,6 +74,20 @@
         </h5>
     </div>
 
+    <!-- Product count -->
+    <div class="row bg-ddgrey justify-content-center">
+        <div class="col-11 my-0">
+            <p class="text-left bg-ddgrey my-0 small text-grey">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span><a href="{% url 'products' %}" class="text-hover-white text-lred text-decoration-none">Products Home</a> | </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
+
+    <!-- Categories search -->
     <div class="row justify-content-center bg-ddgrey pb-5 mb-0">
         <div class="col-11">
             <hr class="hr-light pb-0 mb-0">
@@ -91,7 +105,6 @@
             </ul> 
         </div>
     </div>
-
 
     <!-- Products -->
     <div class="row justify-content-center bg-ddgrey pb-4 mt-0">

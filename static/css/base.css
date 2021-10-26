@@ -88,6 +88,10 @@ h5 {
     color: #9f1323;
 }
 
+.text-grey {
+    color: #999;
+}
+
 .text-lgrey {
     color: #BBB;
 }
@@ -132,6 +136,9 @@ h5 {
     font-size: 2rem;
 }
 
+.text-hover-white:hover {
+    color: #fff;
+}
 /* Underline From Center - the code below has been copied from Hover.css website (https://ianlunn.github.io/Hover/#effects) */
 
 .hvr-underline-from-center {
