@@ -22,7 +22,8 @@
 	text-decoration: none;
 }
 
-button.form-control:hover {
+button.form-control:hover,
+.cat-link:hover  {
 	background-color: #333;
 }
 
